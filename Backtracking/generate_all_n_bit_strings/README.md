@@ -4,18 +4,18 @@ Problem statement :
 
 Example :
 
-INPUT --> 3
+        INPUT :
+                3
 
-OUTPUT -- >
-
-        000
-        001
-        010
-        011
-        100
-        101
-        110
-        111
+        OUTPUT :
+                000
+                001
+                010
+                011
+                100
+                101
+                110
+                111
 
 Explaination :
 
