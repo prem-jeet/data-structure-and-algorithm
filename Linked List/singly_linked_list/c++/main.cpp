@@ -56,9 +56,22 @@ public:
 	//METHOD TO INSERT AT ANY ARBITARY LOCATION
 	void insert_at(int position, _type data)
 	{
-		if (position > count || position < 1)
+		if (position > count + 1 || position < 1)
 		{
 			std::cout << "Invalid position" << std::endl;
+			return;
+		}
+
+		count++;
+
+		if (position == 1)
+		{
+			insert_at_beginning(data);
+			return;
+		}
+		if (position == count + 1)
+		{
+			insert_at_end(data);
 			return;
 		}
 
@@ -75,7 +88,6 @@ public:
 		Node<_type> *ptr = new Node(data);
 		ptr->next = temp->next;
 		temp->next = ptr;
-		count++;
 	}
 
 	//METHOD TO DELETE THE FIRST NODE
@@ -135,8 +147,12 @@ public:
 		Node<_type> *temp = head;
 		if (position == 1)
 		{
-			head = head->next;
-			delete temp;
+			delete_from_start();
+			return;
+		}
+		if (position == count)
+		{
+			delete_from_end();
 			return;
 		}
 
