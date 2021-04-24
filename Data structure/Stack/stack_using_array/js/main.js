@@ -15,7 +15,7 @@ function interface() {
   console.log("");
 }
 
-const s = new Stack();
+const s = new Stack(4);
 
 while (true) {
   interface();

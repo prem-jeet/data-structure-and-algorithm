@@ -58,7 +58,7 @@ class Stack {
   }
 
   isFull() {
-    return this.size == this.capacity;
+    return this.top == this.capacity - 1;
   }
 }
 
